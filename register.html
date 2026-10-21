@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register to Move Forward — KOZA Literary Liaison</title>
+<meta name="description" content="Register as an author with Koza Literary Liaison. Tell us about your book and confirm you're ready to move forward — a named strategist will contact you within one business day.">
+<link rel="preload" href="assets/fonts/Roboto-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/OpenSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<meta property="og:title" content="Register — KOZA Literary Liaison">
+<meta property="og:description" content="Register as an author with Koza Literary Liaison and confirm you are ready to move forward.">
+<meta property="og:image" content="https://kozaliteraryliaison.github.io/assets/img/koza-logo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kozaliteraryliaison.github.io/register.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KOZA Literary Liaison">
+<meta property="og:url" content="https://kozaliteraryliaison.github.io/register.html">
+<meta name="twitter:title" content="Register — KOZA Literary Liaison">
+<meta name="twitter:description" content="Register as an author with Koza Literary Liaison and confirm you are ready to move forward.">
+<meta name="twitter:image" content="https://kozaliteraryliaison.github.io/assets/img/koza-logo.jpg">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/logo.css">
+<link rel="stylesheet" href="assets/css/register.css">
+<link rel="icon" type="image/png" href="assets/img/koza-favicon.png">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header__bar">
+    <a class="brand" href="index.html" aria-label="Koza Literary Liaison home">
+      <span class="brand__mark"><img src="assets/img/koza-mark.png" alt="Koza Literary Liaison monogram" width="42" height="42"></span>
+      <span class="brand__name">Koza<small>Literary Liaison</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="our-story.html">Our Story</a>
+      <a href="index.html#services">Services</a>
+      <a href="our-work.html">Our Work</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="register.html" class="is-active">Register</a>
+    </nav>
+    <a class="btn btn--primary btn--sm header__cta" href="#reg">
+      Register Now
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="our-story.html">Our Story</a>
+  <a href="index.html#services">Services</a>
+  <a href="our-work.html">Our Work</a>
+  <a href="index.html#testimonials">Testimonials</a>
+  <a href="register.html">Register</a>
+  <a class="btn btn--primary" href="#reg">Register Now</a>
+</div>
+
+<main id="content">
+
+<!-- ======================================================= REG HERO -->
+<section class="reg-hero">
+  <div class="wrap reg-hero__inner">
+    <span class="eyebrow">Author Registration</span>
+    <h1>Register &amp; <span class="accent">Move Forward</span></h1>
+    <p>You're ready to begin. Register below and a named strategist will review your book, confirm your proposal and open your launch plan within one business day.</p>
+
+    <ol class="stepper" id="stepper">
+      <li class="stepper__item is-active" data-step="1">
+        <span class="stepper__num">1</span>
+        <span class="stepper__label">Your Details<span class="stepper__sub">Tell us who you are</span></span>
+      </li>
+      <li class="stepper__item" data-step="2">
+        <span class="stepper__num">2</span>
+        <span class="stepper__label">Your Book<span class="stepper__sub">Title &amp; what you need</span></span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================================================== FORM -->
+<section class="reg-sec" id="reg">
+  <div class="wrap reg-layout">
+
+    <!-- ------------------------------------------------ form panel -->
+    <div class="reg-panel">
+      <div class="reg-panel__head">
+        <h2 id="regTitle">Tell us who you are</h2>
+        <p id="regSub">Takes about two minutes. Nothing is charged and nothing is locked in.</p>
+      </div>
+
+      <form id="regForm" novalidate data-subject="Author registration from the KOZA website">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form__error" role="alert"></div>
+
+        <!-- =============================== STEP 1 — DETAILS -->
+        <div class="step is-active" data-step="1">
+          <div class="step__row">
+            <div class="field">
+              <label for="r-first">First Name</label>
+              <input id="r-first" name="first" type="text" placeholder="Amara" autocomplete="given-name" required>
+              <span class="field__error">Please enter your first name.</span>
+            </div>
+            <div class="field">
+              <label for="r-last">Last Name</label>
+              <input id="r-last" name="last" type="text" placeholder="Bell" autocomplete="family-name" required>
+              <span class="field__error">Please enter your last name.</span>
+            </div>
+          </div>
+
+          <div class="step__row" style="margin-top:18px">
+            <div class="field">
+              <label for="r-email">Email Address</label>
+              <input id="r-email" name="email" type="email" placeholder="amara@yourbook.com" autocomplete="email" required>
+              <span class="field__error">Please enter a valid email address.</span>
+            </div>
+            <div class="field">
+              <label for="r-phone">Phone <span style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted)">(optional)</span></label>
+              <input id="r-phone" name="phone" type="tel" placeholder="+1 555 123 4567" autocomplete="tel">
+            </div>
+          </div>
+
+          <span class="step__label">I am registering as</span>
+          <div class="radio-row">
+            <label class="radio-pill">
+              <input type="radio" name="type" value="author" checked>
+              <span>An independent author</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="type" value="publisher">
+              <span>A publisher or imprint</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="type" value="agency">
+              <span>An agent or manager</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="type" value="selfpub">
+              <span>A self-publishing team</span>
+            </label>
+          </div>
+
+          <div class="field" style="margin-top:18px">
+            <label for="r-site">Website or Social <span style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted)">(optional)</span></label>
+            <input id="r-site" name="site" type="text" placeholder="@yourauthorhandle">
+            <span class="field__hint">Helps us see the platform you already have.</span>
+          </div>
+
+          <label class="checkline">
+            <input type="checkbox" name="terms" required>
+            <span>I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>, and I confirm that the manuscript I am registering is my own work or that I hold the rights to market it. <span class="field__error" style="display:none">Please accept the terms to continue.</span></span>
+          </label>
+        </div>
+
+        <!-- =============================== STEP 2 — BOOK -->
+        <div class="step" data-step="2">
+          <div class="field">
+            <label for="b-title">Book Title</label>
+            <input id="b-title" name="bookTitle" type="text" placeholder="The Cartographer's Daughter" required>
+            <span class="field__error">Please enter your book title.</span>
+          </div>
+
+          <div class="step__row" style="margin-top:18px">
+            <div class="field">
+              <label for="b-genre">Genre</label>
+              <select id="b-genre" name="genre" required>
+                <option value="">Select a genre</option>
+                <option>Literary Fiction</option>
+                <option>Thriller &amp; Suspense</option>
+                <option>Memoir &amp; Biography</option>
+                <option>Romance</option>
+                <option>Fantasy &amp; Science Fiction</option>
+                <option>Non-fiction &amp; Business</option>
+                <option>Children &amp; Young Adult</option>
+                <option>Poetry</option>
+                <option>Cookery</option>
+              </select>
+              <span class="field__error">Please choose a genre.</span>
+            </div>
+            <div class="field">
+              <label for="b-date">Publication Date</label>
+              <input id="b-date" name="pubDate" type="text" placeholder="March 12, 2026" required>
+              <span class="field__error">Please enter your publication date.</span>
+            </div>
+          </div>
+
+          <div class="step__row" style="margin-top:18px">
+            <div class="field">
+              <label for="b-run">Print Run</label>
+              <select id="b-run" name="run" required>
+                <option value="">Select a print run</option>
+                <option>Under 1,000 copies</option>
+                <option>1,000 – 5,000 copies</option>
+                <option>5,000 – 20,000 copies</option>
+                <option>20,000+ copies</option>
+                <option>Not yet printed</option>
+              </select>
+              <span class="field__error">Please select a print run.</span>
+            </div>
+            <div class="field">
+              <label for="b-imprint">Publisher / Imprint</label>
+              <input id="b-imprint" name="imprint" type="text" placeholder="Northwind Press" required>
+              <span class="field__error">Please enter your publisher or imprint.</span>
+            </div>
+          </div>
+
+          <span class="step__label">Where can we reach you? <span>— so we send your proposal to the right desk</span></span>
+          <div class="step__row">
+            <div class="field span-2">
+              <label for="b-company">Company / Author Business Name</label>
+              <input id="b-company" name="company" type="text" placeholder="Bell House Books">
+              <span class="field__hint">Leave blank to use your personal name.</span>
+            </div>
+          </div>
+          <div class="field" style="margin-top:18px">
+            <label for="b-addr">Address</label>
+            <input id="b-addr" name="address" type="text" placeholder="418 Bathurst Street, Toronto, ON" required autocomplete="street-address">
+            <span class="field__error">Please enter your address.</span>
+          </div>
+          <div class="step__row" style="margin-top:18px">
+            <div class="field">
+              <label for="b-city">City</label>
+              <input id="b-city" name="city" type="text" placeholder="Toronto" required autocomplete="address-level2">
+              <span class="field__error">Please enter your city.</span>
+            </div>
+            <div class="field">
+              <label for="b-country">Country</label>
+              <select id="b-country" name="country" required>
+                <option>Canada</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Australia</option>
+                <option>New Zealand</option>
+                <option>Ireland</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <span class="step__label">What would you like help with? <span>— pick any</span></span>
+          <div class="chips">
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Launch strategy"><span>Launch strategy</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Author platform"><span>Author platform</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Book club outreach"><span>Book club outreach</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Paid advertising"><span>Paid advertising</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Review &amp; retail PR"><span>Review &amp; retail PR</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Cover &amp; design"><span>Cover &amp; design</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Media kit"><span>Media kit</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Email &amp; newsletter"><span>Email &amp; newsletter</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="interest" value="Backlist revival"><span>Backlist revival</span></label>
+          </div>
+
+          <span class="step__label">How do you prefer we contact you?</span>
+          <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="contact" value="Email" checked><span>Email</span></label>
+            <label class="radio-pill"><input type="radio" name="contact" value="Social message"><span>Social message</span></label>
+            <label class="radio-pill"><input type="radio" name="contact" value="Video call"><span>Video call</span></label>
+          </div>
+
+          <div class="field" style="margin-top:22px">
+            <label for="b-msg">Anything else we should know? <span style="font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted)">(optional)</span></label>
+            <textarea id="b-msg" name="message" placeholder="Your goals, your timeline, anything that's already in motion…"></textarea>
+          </div>
+        </div>
+
+        <!-- =============================== PROCESSING -->
+        <div class="processing" id="processing">
+          <div class="spinner"></div>
+          <h3>Confirming your registration</h3>
+          <p>Creating your author account. Please don't close this page.</p>
+        </div>
+
+        <!-- =============================== SUCCESS -->
+        <div class="success" id="success">
+          <div class="success__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h2>You're registered. Let's move forward.</h2>
+          <p id="successMsg">We have your details. A strategist will review your book and email you at <span id="successEmail">your address</span> within one business day with your proposal and kickoff call invite.</p>
+          <div class="success__ref">REGISTRATION · <span id="refCode">KOZA-000000</span></div>
+          <ul class="next-steps">
+            <li><span class="next-steps__num">1</span><div><strong>Check your inbox.</strong> Your login details, proposal and contract are on the way.</div></li>
+            <li><span class="next-steps__num">2</span><div><strong>Your strategist is assigned.</strong> You'll get a 30-minute kickoff call invite within one business day.</div></li>
+            <li><span class="next-steps__num">3</span><div><strong>Your launch plan opens.</strong> We'll build the strategy, audience and calendar around your book.</div></li>
+          </ul>
+          <a class="btn btn--primary" href="index.html">
+            Back to the homepage
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- =============================== NAV -->
+        <div class="step-nav" id="stepNav">
+          <button class="btn btn--back" type="button" id="backBtn" style="visibility:hidden">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            Back
+          </button>
+          <button class="btn btn--primary" type="button" id="nextBtn">
+            Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ------------------------------------------------ aside -->
+    <aside class="aside" id="aside">
+      <div class="aside__head">
+        <h3>What Happens Next</h3>
+        <p>From registration to a live launch plan</p>
+      </div>
+      <div class="aside__body">
+        <ol>
+          <li><strong>We review your book</strong>Your title, genre and print run go to a strategist — not a sales queue.</li>
+          <li><strong>You get a named strategist</strong>One person owns your campaign and answers you directly.</li>
+          <li><strong>30-minute kickoff call</strong>We walk through the positioning, the audience and the timeline.</li>
+          <li><strong>Your launch plan lands</strong>A full proposal with the strategy, channel mix and budget.</li>
+        </ol>
+
+        <div class="aside__note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+          <p><strong>Nothing is charged here.</strong>Registering simply tells us you're ready to move forward, so we stop sending proposals and start building the plan.</p>
+        </div>
+      </div>
+
+      <ul class="aside__trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3A6 6 0 0 0 6 9v9.5a4.5 4.5 0 0 1 6-1.8 4.5 4.5 0 0 1 6 1.8V9a6 6 0 0 0-6-2.7Z"/></svg>Your manuscript and rights remain yours</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Kickoff within one business day</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One named strategist, no call centre</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 3-3 2.5 2.5L20 7"/></svg>No obligation — you see the plan first</li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ==================================================== TRUST BAR -->
+<section class="trustbar">
+  <div class="wrap trustbar__grid">
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <strong>Kickoff in 48 Hours</strong>
+      <span>Your strategist is assigned the next business day</span>
+    </div>
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.3A6 6 0 0 0 6 9v9.5a4.5 4.5 0 0 1 6-1.8 4.5 4.5 0 0 1 6 1.8V9a6 6 0 0 0-6-2.7Z"/></svg>
+      <strong>Your Rights Stay Yours</strong>
+      <span>We never claim ownership of your manuscript</span>
+    </div>
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+      <strong>A Named Strategist</strong>
+      <span>One person who owns your campaign end to end</span>
+    </div>
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 3-3 2.5 2.5L20 7"/></svg>
+      <strong>No Obligation</strong>
+      <span>You see the full plan and decide before anything starts</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="koza-logo" href="index.html" aria-label="Koza Literary Liaison home">
+          <img src="assets/img/koza-lockup.jpg" alt="Koza Literary Liaison — book literary &amp; marketing agency" width="760" height="760">
+          <svg class="koza-logo__write" viewBox="0 0 760 760" aria-hidden="true" focusable="false"><path class="koza-logo__pen-glow" d="M334,294 C392,330 448,364 498,394"/><path class="koza-logo__pen-core" d="M334,294 C392,330 448,364 498,394"/><path class="koza-logo__pen-comet" d="M334,294 C392,330 448,364 498,394"/></svg>
+          <span class="koza-logo__nib" aria-hidden="true"><span></span></span>
+        </a>
+        <p style="margin-top:20px;max-width:330px">The book marketing agency that treats your novel like the story it deserves. Launch strategy, author platforms and reader communities — built to move books.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer__links">
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="our-work.html">Our Work</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#values">Core Values</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Next Steps</h4>
+        <ul class="footer__links">
+          <li><a href="register.html">Register to move forward</a></li>
+          <li><a href="lets-talk.html">Request a proposal</a></li>
+          <li><a href="lets-talk.html#form">Talk to a strategist</a></li>
+                  </ul>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <ul class="footer__contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" fill="none"/><path d="m4 6 8 6 8-6"/></svg>
+            <span><a href="mailto:kozaliteraryliaison@gmail.com">kozaliteraryliaison@gmail.com</a><br>General enquiries</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>418 Bathurst Street, Toronto<br>Ontario, Canada</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Koza Literary Liaison. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* ==========================================================================
+   KOZA LITERARY LIAISON — logo motion system
+   The official mark is raster artwork; motion is layered on with CSS
+   transitions and a synchronised SVG "pen writing" overlay.
+   ========================================================================== */
+
+/* --------------------------------------------------- header brand mark */
+.brand__mark{
+  width:42px; height:42px; flex:0 0 42px; border-radius:13px;
+  overflow:hidden; position:relative; display:block;
+  box-shadow:0 4px 12px rgba(14,58,67,.18);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.brand:hover .brand__mark{
+  transform:translateY(-2px) scale(1.06);
+  box-shadow:0 10px 24px rgba(34,109,122,.34);
+}
+.brand__mark img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  animation:kozaBreathe 7s ease-in-out infinite;
+}
+@keyframes kozaBreathe{
+  0%,100%{ transform:translateY(0) scale(1); }
+  50%    { transform:translateY(-2px) scale(1.035); }
+}
+
+/* shine sweep across the header mark on hover */
+.brand__mark::after{
+  content:''; position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:linear-gradient(105deg,
+    rgba(255,255,255,0) 32%,
+    rgba(255,255,255,.55) 46%,
+    rgba(255,255,255,.9) 50%,
+    rgba(255,255,255,.55) 54%,
+    rgba(255,255,255,0) 68%);
+  transform:translateX(-130%);
+  transition:transform .85s var(--ease);
+  mix-blend-mode:screen;
+}
+.brand:hover .brand__mark::after{ transform:translateX(130%); }
+
+/* ---------------------------------------------- animated lockup (plated) */
+.koza-logo{
+  position:relative; display:inline-block; width:200px; line-height:0;
+  border-radius:20px; overflow:hidden; isolation:isolate;
+  box-shadow:0 18px 44px rgba(0,0,0,.30), 0 0 0 1px rgba(255,255,255,.10) inset;
+  transition:transform .6s var(--ease), box-shadow .6s var(--ease);
+}
+.koza-logo:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 30px 64px rgba(0,0,0,.42), 0 0 0 1px rgba(255,255,255,.18) inset;
+}
+.koza-logo > img{
+  width:100%; height:auto; display:block;
+  animation:kozaFloat 9s ease-in-out infinite;
+}
+@keyframes kozaFloat{
+  0%,100%{ transform:translateY(0); }
+  50%    { transform:translateY(-5px); }
+}
+
+/* looping light sweep across the whole lockup */
+.koza-logo::after{
+  content:''; position:absolute; inset:0; z-index:4; pointer-events:none;
+  background:linear-gradient(104deg,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,.38) 44%,
+    rgba(255,255,255,.72) 50%,
+    rgba(255,255,255,.38) 56%,
+    rgba(255,255,255,0) 70%);
+  transform:translateX(-130%);
+  animation:kozaSweep 8s var(--ease) infinite;
+  mix-blend-mode:screen;
+}
+@keyframes kozaSweep{
+  0%       { transform:translateX(-130%); }
+  18%,72%  { transform:translateX(130%); }
+  100%     { transform:translateX(130%); }
+}
+
+/* the pen writing the letter — a luminous stroke that traces the K's leg */
+.koza-logo__write{
+  position:absolute; inset:0; z-index:3; width:100%; height:100%;
+  pointer-events:none; overflow:visible;
+  mix-blend-mode:screen;
+}
+.koza-logo__write path{
+  fill:none; stroke-linecap:round; stroke-linejoin:round;
+}
+
+/* wide soft glow laid down under the stroke */
+.koza-logo__pen-glow{
+  stroke:#63DFFF; stroke-width:30; opacity:0;
+  stroke-dasharray:340; stroke-dashoffset:340;
+  filter:blur(8px);
+  animation:kozaWriteGlow 8s var(--ease) infinite;
+}
+/* hot white core of the stroke */
+.koza-logo__pen-core{
+  stroke:#FFFFFF; stroke-width:11; opacity:0;
+  stroke-dasharray:340; stroke-dashoffset:340;
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.95))
+         drop-shadow(0 0 16px rgba(70,190,255,.9));
+  animation:kozaWrite 8s var(--ease) infinite;
+}
+/* a comet that runs ahead of the nib, catching the light */
+.koza-logo__pen-comet{
+  stroke:#D8F7FF; stroke-width:7; opacity:0;
+  stroke-dasharray:26 314; stroke-dashoffset:340;
+  filter:drop-shadow(0 0 8px rgba(190,245,255,1))
+         drop-shadow(0 0 18px rgba(60,180,255,.9));
+  animation:kozaComet 8s var(--ease) infinite;
+}
+@keyframes kozaWrite{
+  0%        { stroke-dashoffset:340; opacity:0; }
+  12%       { opacity:1; }
+  40%,62%   { stroke-dashoffset:0; opacity:1; }
+  76%,100%  { stroke-dashoffset:0; opacity:0; }
+}
+@keyframes kozaWriteGlow{
+  0%        { stroke-dashoffset:340; opacity:0; }
+  12%       { opacity:.85; }
+  40%,62%   { stroke-dashoffset:0; opacity:.85; }
+  76%,100%  { stroke-dashoffset:0; opacity:0; }
+}
+@keyframes kozaComet{
+  0%        { stroke-dashoffset:340; opacity:0; }
+  10%       { opacity:.95; }
+  40%       { stroke-dashoffset:0; opacity:.95; }
+  48%       { stroke-dashoffset:-14; opacity:.55; }
+  58%,100%  { stroke-dashoffset:-14; opacity:0; }
+}
+
+/* a glint that rides the pen nib */
+.koza-logo__nib{
+  position:absolute; z-index:5; left:76.6%; top:8.9%;
+  width:13%; aspect-ratio:1; pointer-events:none;
+  animation:kozaNib 8s var(--ease) infinite;
+}
+.koza-logo__nib span{
+  position:absolute; inset:0; display:block;
+  background:radial-gradient(circle, rgba(255,255,255,.98) 0%, rgba(150,225,255,.85) 26%, rgba(90,190,255,0) 68%);
+  border-radius:50%;
+  animation:kozaGlint 8s ease-in-out infinite;
+}
+@keyframes kozaNib{
+  0%        { opacity:0; transform:translate(0,0) scale(.6); }
+  12%       { opacity:1; }
+  40%       { opacity:1; transform:translate(-46%,40%) scale(1); }
+  58%       { opacity:0; }
+  100%      { opacity:0; transform:translate(-46%,40%) scale(.6); }
+}
+@keyframes kozaGlint{
+  0%,100%{ transform:scale(.7); opacity:.55; }
+  50%    { transform:scale(1.25); opacity:1; }
+}
+
+/* soft blue halo breathing behind the plate */
+.koza-logo::before{
+  content:''; position:absolute; inset:-14%; z-index:-1; border-radius:34px;
+  background:radial-gradient(closest-side, rgba(34,184,209,.40), rgba(34,184,209,0) 72%);
+  animation:kozaHalo 5.5s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes kozaHalo{
+  0%,100%{ opacity:.40; transform:scale(.94); }
+  50%    { opacity:.85; transform:scale(1.06); }
+}
+
+/* ------------------------------------------------ large brand moment */
+.koza-logo--lg{ width:300px; border-radius:28px; }
+.koza-logo--lg .koza-logo__pen-glow{ stroke-width:34; }
+.koza-logo--lg .koza-logo__pen-core{ stroke-width:13; }
+.koza-logo--lg .koza-logo__pen-comet{ stroke-width:8; }
+.koza-logo--lg .koza-logo__nib{ left:76.4%; top:8.7%; width:14%; }
+
+/* ------------------------------------------- footer brand block layout */
+.footer .koza-logo{ margin-bottom:22px; }
+.footer .koza-logo:hover{ transform:translateY(-5px) scale(1.035); }
+
+/* ------------------------------------------------------------ reduced motion */
+@media (prefers-reduced-motion:reduce){
+  .koza-logo > img,
+  .brand__mark img,
+  .koza-logo::after,
+  .koza-logo::before,
+  .koza-logo__nib,
+  .koza-logo__nib span,
+  .koza-logo__write path{
+    animation:none !important;
+  }
+  .koza-logo__write path{ stroke-dashoffset:0; opacity:0; }
+  .koza-logo__nib{ opacity:0; }
+  .koza-logo, .brand__mark{ transition:none; }
+}
+
+/* ---------------------------------------------------------- story page */
+.story-logo{
+  display:flex; justify-content:center; margin:34px auto 8px; position:relative;
+}
+.story-logo .koza-logo{ width:270px; }
