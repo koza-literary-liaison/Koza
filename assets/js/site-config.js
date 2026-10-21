@@ -28,5 +28,5 @@ window.KOZA = {
      opening the visitor's email app with everything pre-filled,
      addressed to you. No enquiry is ever silently dropped.
      ------------------------------------------------------------ */
-  formspreeId: 'https://formspree.io/f/mbgdbale'
+  formspreeId: 'mbgdbale'
 };
