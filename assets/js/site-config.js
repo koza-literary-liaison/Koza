@@ -10,7 +10,7 @@ window.KOZA = {
      preview, the canonical link and the sitemap.
      GitHub Pages format: https://<your-username>.github.io
      Swap in your real domain once you have one. */
-  siteUrl: 'https://kozaliteraryliaison.github.io',
+  siteUrl: 'https://koza-literary-liaison.github.io/Koza',
 
   /* Where enquiries and registrations are delivered. */
   email: 'kozaliteraryliaison@gmail.com',

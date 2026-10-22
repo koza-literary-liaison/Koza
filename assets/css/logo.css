@@ -8,12 +8,12 @@
 .brand__mark{
   width:42px; height:42px; flex:0 0 42px; border-radius:13px;
   overflow:hidden; position:relative; display:block;
-  box-shadow:0 4px 12px rgba(14,58,67,.18);
+  box-shadow:0 4px 12px rgba(36,24,18,.18);
   transition:transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .brand:hover .brand__mark{
   transform:translateY(-2px) scale(1.06);
-  box-shadow:0 10px 24px rgba(34,109,122,.34);
+  box-shadow:0 10px 24px rgba(36,24,18,.34);
 }
 .brand__mark img{
   width:100%; height:100%; object-fit:cover; display:block;
@@ -90,7 +90,7 @@
 
 /* wide soft glow laid down under the stroke */
 .koza-logo__pen-glow{
-  stroke:#63DFFF; stroke-width:30; opacity:0;
+  stroke:#D98A35; stroke-width:30; opacity:0;
   stroke-dasharray:340; stroke-dashoffset:340;
   filter:blur(8px);
   animation:kozaWriteGlow 8s var(--ease) infinite;
@@ -100,15 +100,15 @@
   stroke:#FFFFFF; stroke-width:11; opacity:0;
   stroke-dasharray:340; stroke-dashoffset:340;
   filter:drop-shadow(0 0 6px rgba(255,255,255,.95))
-         drop-shadow(0 0 16px rgba(70,190,255,.9));
+         drop-shadow(0 0 16px rgba(217,138,53,.9));
   animation:kozaWrite 8s var(--ease) infinite;
 }
 /* a comet that runs ahead of the nib, catching the light */
 .koza-logo__pen-comet{
-  stroke:#D8F7FF; stroke-width:7; opacity:0;
+  stroke:#F6F0E6; stroke-width:7; opacity:0;
   stroke-dasharray:26 314; stroke-dashoffset:340;
-  filter:drop-shadow(0 0 8px rgba(190,245,255,1))
-         drop-shadow(0 0 18px rgba(60,180,255,.9));
+  filter:drop-shadow(0 0 8px rgba(246,240,230,1))
+         drop-shadow(0 0 18px rgba(217,138,53,.9));
   animation:kozaComet 8s var(--ease) infinite;
 }
 @keyframes kozaWrite{
