@@ -277,4 +277,87 @@
       }, 300);
     }, 2500);
   }
+   
+  /* -------------------------------------- KOZA seasonal bonus popup */
+  var bonusPopup = document.getElementById('koza-bonus-popup');
+
+  if (bonusPopup) {
+    var bonusForm = document.getElementById('koza-bonus-form');
+    var bonusClose = bonusPopup.querySelector('.koza-bonus-close');
+    var bonusOverlay = bonusPopup.querySelector('.koza-bonus-overlay');
+    var bonusMessage = document.getElementById('koza-bonus-message');
+    var bonusSubmit = document.getElementById('koza-bonus-submit');
+    var bonusStorageKey = 'kozaBonusLastSeen';
+
+    function openBonusPopup() {
+      bonusPopup.classList.add('is-open');
+      bonusPopup.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBonusPopup() {
+      bonusPopup.classList.remove('is-open');
+      bonusPopup.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+
+      try {
+        localStorage.setItem(bonusStorageKey, String(Date.now()));
+      } catch (e) {}
+    }
+
+    function bonusWasRecentlyShown() {
+      try {
+        var lastSeen = Number(localStorage.getItem(bonusStorageKey) || 0);
+        return Date.now() - lastSeen < 7 * 24 * 60 * 60 * 1000;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    if (!bonusWasRecentlyShown()) {
+      window.setTimeout(openBonusPopup, 9000);
+    }
+
+    bonusClose.addEventListener('click', closeBonusPopup);
+    bonusOverlay.addEventListener('click', closeBonusPopup);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && bonusPopup.classList.contains('is-open')) {
+        closeBonusPopup();
+      }
+    });
+
+    bonusForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      bonusSubmit.disabled = true;
+      bonusSubmit.textContent = 'SENDING...';
+      bonusMessage.textContent = '';
+
+      fetch(bonusForm.action, {
+        method: 'POST',
+        body: new FormData(bonusForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Submission failed');
+
+        bonusMessage.textContent =
+          'Thank you! Your signup has been received. We look forward to connecting with you.';
+        bonusForm.reset();
+        bonusSubmit.textContent = 'SIGNUP RECEIVED';
+
+        try {
+          localStorage.setItem(bonusStorageKey, String(Date.now()));
+        } catch (e) {}
+      })
+      .catch(function () {
+        bonusMessage.textContent =
+          'We could not submit your signup. Please try again.';
+        bonusSubmit.disabled = false;
+        bonusSubmit.textContent = 'CLAIM MY AUTHOR BONUS';
+      });
+    });
+  }
+
 })();
