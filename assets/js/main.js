@@ -260,4 +260,21 @@
       window.scrollTo({ top: top, behavior: 'smooth' });
     });
   });
+     /* ------------------------------------------ rotating hero headline */
+  var rotatingWord = document.querySelector('.rotating-word');
+
+  if (rotatingWord && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var words = ['Discovered.', 'Celebrated.', 'Remembered.', 'Read.'];
+    var wordIndex = 0;
+
+    setInterval(function () {
+      rotatingWord.classList.add('is-changing');
+
+      setTimeout(function () {
+        wordIndex = (wordIndex + 1) % words.length;
+        rotatingWord.textContent = words[wordIndex];
+        rotatingWord.classList.remove('is-changing');
+      }, 300);
+    }, 2500);
+  }
 })();
