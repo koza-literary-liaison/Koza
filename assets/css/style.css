@@ -661,3 +661,21 @@ a.mail-link:hover{ color:var(--cyan-deep); border-bottom-color:var(--cyan-deep);
   .logos{ gap:20px 30px; }
   .value{ gap:14px; }
 }
+
+
+/* KOZA rotating headline animation */
+.rotating-word {
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.rotating-word.is-changing {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotating-word {
+    transition: none;
+  }
+}
