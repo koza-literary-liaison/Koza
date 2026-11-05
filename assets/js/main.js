@@ -351,11 +351,11 @@
           localStorage.setItem(bonusStorageKey, String(Date.now()));
         } catch (e) {}
       })
-      .catch(function () {
+           .catch(function () {
         bonusMessage.textContent =
           'We could not submit your signup. Please try again.';
         bonusSubmit.disabled = false;
-                bonusSubmit.textContent = 'CLAIM MY AUTHOR BONUS';
+        bonusSubmit.textContent = 'CLAIM MY AUTHOR BONUS';
       });
     });
   }
