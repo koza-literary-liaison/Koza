@@ -679,3 +679,195 @@ a.mail-link:hover{ color:var(--cyan-deep); border-bottom-color:var(--cyan-deep);
     transition: none;
   }
 }
+
+/* =====================================================
+   KOZA SEASONAL AUTHOR BONUS POPUP
+   ===================================================== */
+
+.koza-bonus-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: var(--font-body);
+}
+
+.koza-bonus-popup.is-open {
+  display: flex;
+}
+
+.koza-bonus-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 15, 11, 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.koza-bonus-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 510px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 42px 38px 30px;
+  border: 1px solid #D98A35;
+  border-radius: 18px;
+  background: #F6F0E6;
+  box-shadow: 0 25px 80px rgba(0,0,0,.35);
+  text-align: center;
+  animation: kozaBonusAppear .5s ease both;
+}
+
+@keyframes kozaBonusAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.koza-bonus-close {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  border: 0;
+  background: transparent;
+  color: #514239;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.koza-bonus-label {
+  margin: 0 0 13px;
+  color: #A9232D;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.koza-bonus-card h2 {
+  margin: 0 0 14px;
+  color: #241812;
+  font-family: var(--font-display);
+  font-size: clamp(25px, 5vw, 34px);
+  line-height: 1.2;
+}
+
+.koza-bonus-intro {
+  margin: 0 0 22px;
+  color: #514239;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.koza-bonus-gift {
+  margin-bottom: 23px;
+  padding: 19px;
+  border-radius: 12px;
+  background: #241812;
+  color: #F6F0E6;
+}
+
+.koza-bonus-gift strong {
+  color: #E9B875;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.koza-bonus-gift p {
+  margin: 9px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+#koza-bonus-form {
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+#koza-bonus-form > label:first-child {
+  color: #241812;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#koza-bonus-email {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 15px;
+  border: 1px solid #D6C4AF;
+  border-radius: 8px;
+  background: #fff;
+  color: #241812;
+  font: inherit;
+}
+
+#koza-bonus-form .koza-bonus-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #514239;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.koza-bonus-consent input {
+  margin-top: 3px;
+  accent-color: #A9232D;
+}
+
+#koza-bonus-submit {
+  width: 100%;
+  min-height: 51px;
+  padding: 13px;
+  border: 0;
+  border-radius: 8px;
+  background: #A9232D;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background .25s ease, transform .25s ease;
+}
+
+#koza-bonus-submit:hover {
+  background: #811923;
+  transform: translateY(-2px);
+}
+
+#koza-bonus-message {
+  margin: 0;
+  color: #241812;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.koza-bonus-footnote {
+  margin: 15px 0 0;
+  color: #79695D;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .koza-bonus-card {
+    padding: 38px 22px 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .koza-bonus-card {
+    animation: none;
+  }
+}
+
