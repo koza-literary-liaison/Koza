@@ -781,5 +781,66 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+      <!-- KOZA Seasonal Author Bonus Popup -->
+<div id="koza-bonus-popup" class="koza-bonus-popup" aria-hidden="true">
+  <div class="koza-bonus-overlay"></div>
+
+  <div class="koza-bonus-card" role="dialog"
+       aria-modal="true" aria-labelledby="koza-bonus-title">
+
+    <button type="button" class="koza-bonus-close"
+            aria-label="Close popup">&times;</button>
+
+    <p class="koza-bonus-label">A SPECIAL SEASONAL OFFER FROM KOZA</p>
+
+    <h2 id="koza-bonus-title">
+      A Special Gift for Your Next Great Story
+    </h2>
+
+    <p class="koza-bonus-intro">
+      Your book deserves to stand out. Join our author community
+      and discover exclusive seasonal bonuses.
+    </p>
+
+    <div class="koza-bonus-gift">
+      <strong>YOUR AUTHOR BONUS</strong>
+      <p>Enjoy a complimentary professional 3D book mockup,
+      or eligible Amazon A+ Content design, when you sign up
+      for a qualifying KOZA marketing package during the
+      promotional period.</p>
+    </div>
+
+    <form id="koza-bonus-form"
+          action="https://formspree.io/f/mvkkydng"
+          method="POST">
+
+      <label for="koza-bonus-email">Your email address</label>
+      <input type="email" id="koza-bonus-email"
+             name="email" placeholder="Enter your email address"
+             required>
+
+      <input type="hidden" name="_subject"
+             value="New KOZA Seasonal Author Bonus Signup">
+
+      <label class="koza-bonus-consent">
+        <input type="checkbox" name="marketing_consent"
+               value="Yes" required>
+        I agree to receive author marketing updates and
+        seasonal offers from KOZA.
+      </label>
+
+      <button type="submit" id="koza-bonus-submit">
+        CLAIM MY AUTHOR BONUS
+      </button>
+
+      <p id="koza-bonus-message" aria-live="polite"></p>
+    </form>
+
+    <p class="koza-bonus-footnote">
+      No spam. Unsubscribe whenever you wish.
+    </p>
+  </div>
+</div>
+<!-- End KOZA Seasonal Author Bonus Popup -->
 </body>
 </html>
