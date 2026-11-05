@@ -355,8 +355,9 @@
         bonusMessage.textContent =
           'We could not submit your signup. Please try again.';
         bonusSubmit.disabled = false;
-        bonusSubmit.textContent = 'CLAIM MY AUTHOR BONUS';
-         });
+                bonusSubmit.textContent = 'CLAIM MY AUTHOR BONUS';
+      });
+    });
   }
 });
 })();
