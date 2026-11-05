@@ -277,7 +277,7 @@
       }, 300);
     }, 2500);
   }
-   
+   document.addEventListener('DOMContentLoaded', function () {
   /* -------------------------------------- KOZA seasonal bonus popup */
   var bonusPopup = document.getElementById('koza-bonus-popup');
 
@@ -356,8 +356,7 @@
           'We could not submit your signup. Please try again.';
         bonusSubmit.disabled = false;
         bonusSubmit.textContent = 'CLAIM MY AUTHOR BONUS';
-      });
-    });
+         });
   }
-
+});
 })();
