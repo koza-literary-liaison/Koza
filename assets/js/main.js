@@ -359,5 +359,92 @@
       });
     });
   }
+  
+  /* ================================================
+     KOZA BOOK MARKETING READINESS ASSESSMENT
+     ================================================ */
+
+  var assessmentForm = document.getElementById('koza-assessment-form');
+  var assessmentResult = document.getElementById('koza-assessment-result');
+
+  if (assessmentForm && assessmentResult) {
+    assessmentForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var status = document.getElementById('koza-book-status').value;
+      var genre = document.getElementById('koza-book-genre').value;
+      var history = document.getElementById('koza-marketing-history').value;
+      var goal = document.getElementById('koza-book-goal').value;
+      var challenge = document.getElementById('koza-book-challenge').value;
+
+      var title = 'Your Book Marketing Starting Point';
+      var message = '';
+      var recommendations = [];
+
+      if (status === 'writing' || status === 'launching') {
+        title = 'Build a Strong Foundation';
+        message = 'Your book is approaching an important stage. Preparing your author platform and marketing direction early can help you reach the right readers when your book is ready.';
+        recommendations.push('Develop a clear author brand and book positioning.');
+        recommendations.push('Prepare a promotional strategy before launch.');
+        recommendations.push('Build awareness among your intended readership.');
+      } else if (status === 'relaunch') {
+        title = 'Give Your Book a Fresh Start';
+        message = 'A relaunch is an opportunity to reconnect with readers, refresh your book presentation and create renewed interest.';
+        recommendations.push('Refresh your book positioning and promotional materials.');
+        recommendations.push('Create a focused relaunch campaign.');
+        recommendations.push('Reconnect with potential readers and relevant communities.');
+      } else {
+        title = 'Strengthen Your Book’s Visibility';
+        message = 'Your book is already published. The next opportunity is to improve how readers discover it and connect with its message.';
+        recommendations.push('Improve your book’s visibility and discoverability.');
+        recommendations.push('Create consistent promotional content.');
+        recommendations.push('Build stronger reader engagement.');
+      }
+
+      if (goal === 'sales' || challenge === 'conversion') {
+        recommendations.unshift('Review your book’s sales presentation and reader conversion journey.');
+      } else if (goal === 'engagement') {
+        recommendations.unshift('Develop a reader engagement strategy that encourages lasting connections.');
+      } else if (goal === 'visibility' || challenge === 'discoverability') {
+        recommendations.unshift('Prioritise targeted visibility and audience discovery.');
+      } else if (goal === 'launch') {
+        recommendations.unshift('Create a structured launch plan with coordinated promotional activities.');
+      }
+
+      if (challenge === 'branding') {
+        recommendations.push('Strengthen your author identity and visual branding.');
+      }
+
+      if (challenge === 'strategy' || history === 'none') {
+        recommendations.push('Start with a practical marketing roadmap tailored to your book.');
+      }
+
+      if (genre === 'children') {
+        recommendations.push('Use age-appropriate, parent- and educator-focused promotional messaging.');
+      } else if (genre === 'nonfiction' || genre === 'business') {
+        recommendations.push('Highlight the practical value and key outcomes readers can gain from your book.');
+      } else if (genre === 'poetry') {
+        recommendations.push('Use compelling excerpts and literary storytelling to introduce your work.');
+      }
+
+      var uniqueRecommendations = recommendations.filter(function (item, index, list) {
+        return list.indexOf(item) === index;
+      });
+
+      assessmentResult.innerHTML =
+        '<h3>' + title + '</h3>' +
+        '<p>' + message + '</p>' +
+        '<h4>Your recommended next steps</h4>' +
+        '<ul>' + uniqueRecommendations.map(function (item) {
+          return '<li>' + item + '</li>';
+        }).join('') + '</ul>' +
+        '<p><strong>Ready to take the next step?</strong> KOZA Literary Liaison can help you turn these priorities into a focused book marketing plan.</p>' +
+        '<a class="btn btn--primary" href="lets-talk.html">Discuss Your Book With KOZA</a>';
+
+      assessmentResult.hidden = false;
+      assessmentResult.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+    
 });
 })();
