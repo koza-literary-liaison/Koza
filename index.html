@@ -282,6 +282,106 @@
   </div>
 </section>
 
+<!-- ==========================================================
+     KOZA BOOK MARKETING READINESS ASSESSMENT
+========================================================== -->
+<section class="sec koza-assessment" id="book-assessment">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Your Book. Your Next Chapter.</span>
+      <h2>What Does Your Book <span class="accent">Need to Grow?</span></h2>
+      <p>
+        Every book has a different journey. Answer five quick questions
+        and discover where your marketing efforts should begin.
+      </p>
+    </div>
+
+    <div class="koza-assessment-card reveal">
+      <div class="koza-assessment-intro">
+        <span class="koza-assessment-number">01 / 05</span>
+        <h3>Your Book Marketing Readiness Check</h3>
+        <p>Tell us a little about your book and your goals.</p>
+      </div>
+
+      <form id="koza-assessment-form">
+
+        <div class="koza-assessment-question">
+          <label for="koza-book-status">1. What stage is your book at?</label>
+          <select id="koza-book-status" name="book_status" required>
+            <option value="">Choose your answer</option>
+            <option value="writing">I'm still writing my book</option>
+            <option value="launching">My book is launching soon</option>
+            <option value="published">My book is already published</option>
+            <option value="relaunch">I want to relaunch my book</option>
+          </select>
+        </div>
+
+        <div class="koza-assessment-question">
+          <label for="koza-book-genre">2. What genre best describes your book?</label>
+          <select id="koza-book-genre" name="book_genre" required>
+            <option value="">Choose your genre</option>
+            <option value="fiction">Literary or general fiction</option>
+            <option value="romance">Romance</option>
+            <option value="fantasy">Fantasy or science fiction</option>
+            <option value="thriller">Mystery or thriller</option>
+            <option value="nonfiction">Nonfiction or self-help</option>
+            <option value="business">Business or personal development</option>
+            <option value="poetry">Poetry</option>
+            <option value="children">Children's books</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="koza-assessment-question">
+          <label for="koza-marketing-history">3. Have you marketed your book before?</label>
+          <select id="koza-marketing-history" name="marketing_history" required>
+            <option value="">Choose your answer</option>
+            <option value="none">No, not yet</option>
+            <option value="some">Yes, but with limited results</option>
+            <option value="regular">Yes, I market my book regularly</option>
+          </select>
+        </div>
+
+        <div class="koza-assessment-question">
+          <label for="koza-book-goal">4. What is your biggest goal right now?</label>
+          <select id="koza-book-goal" name="book_goal" required>
+            <option value="">Choose your main goal</option>
+            <option value="readers">Reach more readers</option>
+            <option value="sales">Increase book sales</option>
+            <option value="visibility">Build visibility and recognition</option>
+            <option value="engagement">Build an engaged reader community</option>
+            <option value="launch">Plan a successful book launch</option>
+          </select>
+        </div>
+
+        <div class="koza-assessment-question">
+          <label for="koza-book-challenge">5. What is your biggest marketing challenge?</label>
+          <select id="koza-book-challenge" name="book_challenge" required>
+            <option value="">Choose your biggest challenge</option>
+            <option value="discoverability">Readers are not discovering my book</option>
+            <option value="branding">I need stronger author branding</option>
+            <option value="promotion">I need effective book promotion</option>
+            <option value="strategy">I don't know where to start</option>
+            <option value="conversion">People notice my book but don't buy it</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary" id="koza-assessment-submit">
+          Discover My Book's Marketing Needs
+        </button>
+
+      </form>
+
+      <div id="koza-assessment-result"
+           class="koza-assessment-result"
+           aria-live="polite"
+           hidden>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END KOZA BOOK MARKETING READINESS ASSESSMENT -->
+
 <!-- ========================================================== WHY US -->
 <section class="sec sec--pale why" id="why">
   <div class="wrap">
