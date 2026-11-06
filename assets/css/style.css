@@ -871,3 +871,107 @@ a.mail-link:hover{ color:var(--cyan-deep); border-bottom-color:var(--cyan-deep);
   }
 }
 
+/* =====================================================
+   KOZA BOOK MARKETING READINESS ASSESSMENT
+   ===================================================== */
+
+.koza-assessment {
+  background: #F6F0E6;
+}
+
+.koza-assessment-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 42px;
+  border: 1px solid #E1D1BF;
+  border-radius: 18px;
+  background: #fffdf9;
+  box-shadow: 0 18px 55px rgba(36, 24, 18, 0.08);
+}
+
+.koza-assessment-intro {
+  margin-bottom: 30px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #E8DDD0;
+}
+
+.koza-assessment-number {
+  color: #A9232D;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.koza-assessment-intro h3 {
+  margin: 12px 0 8px;
+  color: #241812;
+  font-size: clamp(22px, 4vw, 29px);
+}
+
+.koza-assessment-intro p {
+  margin: 0;
+  color: #79695D;
+  line-height: 1.7;
+}
+
+.koza-assessment-question {
+  margin-bottom: 24px;
+}
+
+.koza-assessment-question label {
+  display: block;
+  margin-bottom: 10px;
+  color: #241812;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.koza-assessment-question select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 15px;
+  border: 1px solid #D6C4AF;
+  border-radius: 8px;
+  background: #fff;
+  color: #514239;
+  font: inherit;
+  cursor: pointer;
+}
+
+.koza-assessment-question select:focus {
+  outline: 2px solid #D98A35;
+  outline-offset: 2px;
+}
+
+#koza-assessment-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.koza-assessment-result {
+  margin-top: 28px;
+  padding: 25px;
+  border-left: 4px solid #D98A35;
+  border-radius: 8px;
+  background: #F6F0E6;
+  color: #241812;
+  line-height: 1.7;
+}
+
+.koza-assessment-result h3 {
+  margin-top: 0;
+  color: #A9232D;
+}
+
+.koza-assessment-result ul {
+  padding-left: 22px;
+}
+
+@media (max-width: 600px) {
+  .koza-assessment-card {
+    padding: 25px 18px;
+  }
+}
+
